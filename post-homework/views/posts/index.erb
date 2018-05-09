@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title><%= @title %></title>
+</head>
+<body>
+  <h1>welcome to the index page</h1>
+  <!--a loop is used to display each property in the hash/object to the html page  -->
+  <% @posts.each do |post| %>
+  <div>
+    <h2><%=post[:email]%></h2>
+    <p><%=post[:firstname]%></p>
+    <p><%=post[:lastname]%></p>
+    <p><%=post[:age]%></p>
+  </div>
+  <%end%>
+</body>
+</html>
